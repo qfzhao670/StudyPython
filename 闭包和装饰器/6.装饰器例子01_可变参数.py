@@ -1,4 +1,5 @@
 def my_docorator(fn_name):
+    # inner_func的 输入/是否有return 和原函数保持一致
     def inner_func(*args, **kwargs):
         print("正在进行计算中.....")
         return fn_name(*args, **kwargs)
