@@ -29,7 +29,7 @@ accept_server, client_info = server_socket.accept()
 # 5. 给客户端发送消息
 accept_server.send(b'Welcome!')
 # 6. 接收客户端的信息并打印
-data = accept_server.recv(1024).decode("utf-8")
+data = accept_server.recv(1024).decode("utf-8")     # recv，在客户端关闭之前会一直监听，这个过程中进程会一直停留在此
 print(f"服务器端收到：{data}")
 # 7. 释放资源
 accept_server.close()
